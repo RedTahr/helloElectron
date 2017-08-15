@@ -5,14 +5,16 @@ const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
-let mainWindow
-
 app.on('ready', _ => {
   console.log('ready!')
-  mainWindow = new BrowserWindow({
+  let mainWindow = new BrowserWindow({
     height:400,
     width:400
   })
+
+  mainWindow.loadURL(`file://${__dirname}/countdown.html`)
+
+  mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', _ => {
     console.log('closed!')
