@@ -1,0 +1,16 @@
+{
+  "name": "ipc-demo",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start":"electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^1.7.5",
+    "electron-prebuilt": "^1.4.13"
+  }
+}
