@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "src/main.js",
   "scripts": {
-    "start":"electron ."
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "electron": "^1.7.5"
+    "electron": "^1.7.5",
+    "@pokusew/pcsclite": "^0.4.17"
   }
 }
