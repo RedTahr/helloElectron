@@ -1,7 +1,7 @@
 {
   "name": "ipc-demo",
   "version": "1.0.0",
-  "main": "src/main.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "electron ."
   },
