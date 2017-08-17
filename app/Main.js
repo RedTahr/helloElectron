@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var path = require('path');
 var url = require('url');
 var Main = (function () {
@@ -11,7 +11,7 @@ var Main = (function () {
         }
     };
     Main.onClose = function () {
-        Main.mainWindow = null; // Dereference the window object
+        Main.mainWindow = null;
     };
     Main.onReady = function () {
         Main.mainWindow = new Main.BrowserWindow({ width: 800, height: 600 });
@@ -24,7 +24,6 @@ var Main = (function () {
         Main.mainWindow.on('closed', Main.onClose);
     };
     Main.main = function (app, browserWindow) {
-        // pass in electron stuff to make things more testable, i.e. less dependencies
         Main.BrowserWindow = browserWindow;
         Main.application = app;
         Main.application.on('window-all-closed', Main.onWindowAllClosed);
@@ -32,4 +31,5 @@ var Main = (function () {
     };
     return Main;
 }());
-exports["default"] = Main;
+exports.default = Main;
+//# sourceMappingURL=Main.js.map
