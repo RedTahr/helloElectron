@@ -4,7 +4,7 @@ const path = require("path")
 const url = require("url")
 
 export default class Main {
-  static mainWindow: Electron.BrowserWindow;
+  static mainWindow: Electron.BrowserWindow | null;
   static application: Electron.App;
   static BrowserWindow;
 
@@ -15,7 +15,7 @@ export default class Main {
   }
 
   private static onClose() {
-//    Main.mainWindow = null; // Dereference the window object
+    Main.mainWindow = null; // Dereference the window object
   }
 
   private static onReady() {

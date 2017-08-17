@@ -11,6 +11,7 @@ var Main = (function () {
         }
     };
     Main.onClose = function () {
+        Main.mainWindow = null;
     };
     Main.onReady = function () {
         Main.mainWindow = new Main.BrowserWindow({ width: 800, height: 600 });
