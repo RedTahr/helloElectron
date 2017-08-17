@@ -1,16 +1,19 @@
 {
   "name": "hello-electron",
   "version": "0.2.0",
+  "description": "first foray in electron",
   "main": "app/app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RedTahr/helloElectron.git"
+  },
   "scripts": {
     "start": "electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@pokusew/pcsclite": "^0.4.17",
     "electron": "^1.7.5"
   },
   "dependencies": {}

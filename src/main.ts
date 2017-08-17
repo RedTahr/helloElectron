@@ -1,21 +1,21 @@
-import {BrowserWindow} from "electron"
+import {BrowserWindow} from "electron";
 
-const path = require("path")
-const url = require("url")
+const path = require("path");
+const url = require("url");
 
 export default class Main {
   static mainWindow: Electron.BrowserWindow | null;
   static application: Electron.App;
-  static BrowserWindow;
+  static BrowserWindow: Electron.BrowserWindow;
 
-  private static onWindowAllClosed(){
+  private static onWindowAllClosed() {
     if (process.platform !== "darwin") {
       Main.application.quit();
     }
   }
 
   private static onClose() {
-    Main.mainWindow = null; // Dereference the window object
+    Main.mainWindow = null; // dereference the window object
   }
 
   private static onReady() {
