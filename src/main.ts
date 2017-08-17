@@ -1,7 +1,7 @@
-import {BrowserWindow} from 'electron'
+import {BrowserWindow} from "electron"
 
-const path = require('path')
-const url = require('url')
+const path = require("path")
+const url = require("url")
 
 export default class Main {
   static mainWindow: Electron.BrowserWindow;
@@ -9,24 +9,24 @@ export default class Main {
   static BrowserWindow;
 
   private static onWindowAllClosed(){
-    if (process.platform !== 'darwin') {
+    if (process.platform !== "darwin") {
       Main.application.quit();
     }
   }
 
   private static onClose() {
-    Main.mainWindow = null; // Dereference the window object
+//    Main.mainWindow = null; // Dereference the window object
   }
 
   private static onReady() {
     Main.mainWindow = new Main.BrowserWindow({width: 800, height: 600});
     Main.mainWindow.loadURL(url.format({
-      pathname: path.join(__dirname, 'index.html'),
-      protocol: 'file:',
+      pathname: path.join(__dirname, "index.html"),
+      protocol: "file:",
       slashes: true
     }));
     Main.mainWindow.webContents.openDevTools();
-    Main.mainWindow.on('closed', Main.onClose);
+    Main.mainWindow.on("closed", Main.onClose);
   }
 
   static main(app: Electron.App, browserWindow: typeof BrowserWindow) {
@@ -34,7 +34,7 @@ export default class Main {
 
     Main.BrowserWindow = browserWindow;
     Main.application = app;
-    Main.application.on('window-all-closed', Main.onWindowAllClosed);
-    Main.application.on('ready', Main.onReady);
+    Main.application.on("window-all-closed", Main.onWindowAllClosed);
+    Main.application.on("ready", Main.onReady);
   }
 }
