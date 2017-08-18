@@ -22,8 +22,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^1.7.5",
-    "nativescript-nfc": "^1.1.0"
+    "electron": "^1.7.5"
   },
   "dependencies": {}
 }
