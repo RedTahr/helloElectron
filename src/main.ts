@@ -1,12 +1,15 @@
 import {BrowserWindow} from "electron";
 
-const path = require("path");
-const url = require("url");
+import { devMenuTemplate } from "./menu/dev_menu_template";
+
+import * as path from "path";
+import * as url from "url";
 
 export default class Main {
   static mainWindow: Electron.BrowserWindow | null;
   static application: Electron.App;
   static BrowserWindow: Electron.BrowserWindow;
+  static Menu: Electron.Menu;
 
   private static onWindowAllClosed() {
     if (process.platform !== "darwin") {
@@ -18,7 +21,13 @@ export default class Main {
     Main.mainWindow = null; // dereference the window object
   }
 
+  private static setApplicationMenu() {
+    var menus: any[] = [devMenuTemplate];
+    Main.Menu.setApplicationMenu(Main.Menu.buildFromTemplate(menus));
+  }
+
   private static onReady() {
+    Main.setApplicationMenu();
     Main.mainWindow = new Main.BrowserWindow({width: 800, height: 600});
     Main.mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, "index.html"),
@@ -29,9 +38,8 @@ export default class Main {
     Main.mainWindow.on("closed", Main.onClose);
   }
 
-  static main(app: Electron.App, browserWindow: typeof BrowserWindow) {
-    // pass in electron stuff to make things more testable, i.e. less dependencies
-
+  static main(app: Electron.App, browserWindow: Electron.BrowserWindow, menu: Electron.Menu) {
+    Main.Menu = menu;
     Main.BrowserWindow = browserWindow;
     Main.application = app;
     Main.application.on("window-all-closed", Main.onWindowAllClosed);
