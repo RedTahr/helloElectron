@@ -11,7 +11,7 @@ export default class Main {
   static BrowserWindow: Electron.BrowserWindow;
   static Menu: Electron.Menu;
 
-  private static onWindowAllClosed() {
+  private static onWindowAllClosed(): void {
     if (process.platform !== "darwin") {
       Main.application.quit();
     }
@@ -21,12 +21,12 @@ export default class Main {
     Main.mainWindow = null; // dereference the window object
   }
 
-  private static setApplicationMenu() {
+  private static setApplicationMenu(): void {
     var menus: any[] = [devMenuTemplate];
     Main.Menu.setApplicationMenu(Main.Menu.buildFromTemplate(menus));
   }
 
-  private static onReady() {
+  private static onReady(): void {
     Main.setApplicationMenu();
     Main.mainWindow = new Main.BrowserWindow({width: 800, height: 600});
     Main.mainWindow.loadURL(url.format({
@@ -38,7 +38,7 @@ export default class Main {
     Main.mainWindow.on("closed", Main.onClose);
   }
 
-  static main(app: Electron.App, browserWindow: Electron.BrowserWindow, menu: Electron.Menu) {
+  static main(app: Electron.App, browserWindow: Electron.BrowserWindow, menu: Electron.Menu): void {
     Main.Menu = menu;
     Main.BrowserWindow = browserWindow;
     Main.application = app;
