@@ -7,6 +7,14 @@
     "type": "git",
     "url": "git://github.com/RedTahr/helloElectron.git"
   },
+  "build": {
+    "appId": "com.example.hello-electron",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  },
   "scripts": {
     "start": "electron ."
   },
@@ -14,7 +22,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^1.7.5"
+    "electron": "^1.7.5",
+    "nativescript-nfc": "^1.1.0"
   },
   "dependencies": {}
 }
