@@ -17,12 +17,13 @@
   },
   "scripts": {
     "start": "electron ."
-  },
+  },  
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^1.7.5"
+    "electron": "^1.7.5",
+    "@pokusew/pcsclite":"^0.4.17"
   },
   "dependencies": {}
 }
