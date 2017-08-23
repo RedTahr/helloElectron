@@ -17,13 +17,15 @@
   },
   "scripts": {
     "start": "electron ."
-  },  
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@pokusew/pcsclite": "^0.4.17",
     "electron": "^1.7.5",
-    "@pokusew/pcsclite":"^0.4.17"
+    "electron-rebuild": "^1.6.0",
+    "nfc-pcsc": "^0.6.0"
   },
   "dependencies": {}
 }

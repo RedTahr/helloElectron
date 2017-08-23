@@ -1,5 +1,4 @@
 import {BrowserWindow} from "electron";
-
 import { devMenuTemplate } from "./menu/dev_menu_template";
 
 import * as path from "path";
