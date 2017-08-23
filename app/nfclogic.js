@@ -1,5 +1,5 @@
 "use strict";
-//Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", { value: true });
 var nfc_pcsc_1 = require("nfc-pcsc");
 var nfc = new nfc_pcsc_1.NFC();
 nfc.on('reader', function (reader) {
