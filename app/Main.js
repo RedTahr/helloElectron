@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var dev_menu_template_1 = require("./menu/dev_menu_template");
 var path = require("path");
 var url = require("url");
@@ -38,5 +38,5 @@ var Main = (function () {
     };
     return Main;
 }());
-exports["default"] = Main;
+exports.default = Main;
 //# sourceMappingURL=Main.js.map
