@@ -8,7 +8,7 @@
     "url": "git://github.com/RedTahr/helloElectron.git"
   },
   "build": {
-    "appId": "com.example.hello-electron",
+    "appId": "com.redtahr.hello-electron",
     "files": [
       "app/**/*",
       "node_modules/**/*",
@@ -19,12 +19,13 @@
     "start": "electron ."
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "RedTahr",
+  "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.7.5",
+    "electron": "^1.7.5"
+  },
+  "dependencies": {
     "electron-rebuild": "^1.6.0",
     "nfc-pcsc": "^0.6.0"
-  },
-  "dependencies": {}
+  }
 }
