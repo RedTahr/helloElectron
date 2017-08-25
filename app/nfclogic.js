@@ -7,6 +7,7 @@ nfc.on('reader', function (reader) {
     reader.aid = 'F222222222';
     reader.on('card', function (card) {
         console.log(reader.reader.name + "  card detected", card);
+        document.getElementById('card-uid').innerHTML = card.uid;
     });
     reader.on('card.off', function (card) {
         console.log(reader.reader.name + "  card removed", card);
