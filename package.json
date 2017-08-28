@@ -25,7 +25,9 @@
     "electron": "^1.7.5"
   },
   "dependencies": {
+    "@taptrack/ndef": "^1.0.3",
     "electron-rebuild": "^1.6.0",
+    "js-logger": "^1.4.1",
     "nfc-pcsc": "^0.6.0"
   }
 }
